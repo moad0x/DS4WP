@@ -1,0 +1,13 @@
+!data/wp_data/
+
+# ignore everything in the "wp-content" directory, except:
+# "mu-plugins", "plugins", "themes" directory
+data/wp_data/wp-content/*
+!data/wp_data/wp-content/plugins/
+!data/wp_data/wp-content/mu-plugins/
+!data/wp_data/wp-content/themes/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite

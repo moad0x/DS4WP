@@ -74,24 +74,24 @@ services:
             - 'traefik.http.routers.${PROJECT_NAME}_varnish.tls.certresolver=myhttpchallenge'
             - 'traefik.enable=true'
 
-    #  traefik:
-    #    restart: unless-stopped
-    #     image: 'traefik:v2.0'
-    #     command:
-    #         - '--log.level=DEBUG'
-    #         - '--api.insecure=true'
-    #         - '--providers.docker=true'
-    #         - '--providers.docker.exposedbydefault=false'
-    #         - '--entrypoints.web.address=:80'
-    #         - '--entrypoints.websecure.address=:443'
-    #         - '--certificatesresolvers.myhttpchallenge.acme.httpchallenge=true'
-    #         - '--certificatesresolvers.myhttpchallenge.acme.httpchallenge.entrypoint=web'
-    #         - '--certificatesresolvers.myhttpchallenge.acme.email=contact@domain.com'
-    #         - '--certificatesresolvers.myhttpchallenge.acme.storage=/letsencrypt/acme.json'
-    #     ports:
-    #         - '80:80'
-    #         - '443:443'
-    #         - '8080:8080'
-    #     volumes:
-    #         - '/var/run/docker.sock:/var/run/docker.sock'
-    #         - './data/letsencrypt:/letsencrypt'
+     traefik:
+       restart: unless-stopped
+        image: 'traefik:v2.0'
+        command:
+            - '--log.level=DEBUG'
+            - '--api.insecure=true'
+            - '--providers.docker=true'
+            - '--providers.docker.exposedbydefault=false'
+            - '--entrypoints.web.address=:80'
+            - '--entrypoints.websecure.address=:443'
+            - '--certificatesresolvers.myhttpchallenge.acme.httpchallenge=true'
+            - '--certificatesresolvers.myhttpchallenge.acme.httpchallenge.entrypoint=web'
+            - '--certificatesresolvers.myhttpchallenge.acme.email=${CERTMAIL}'
+            - '--certificatesresolvers.myhttpchallenge.acme.storage=/letsencrypt/acme.json'
+        ports:
+            - '80:80'
+            - '443:443'
+            - '8080:8080'
+        volumes:
+            - '/var/run/docker.sock:/var/run/docker.sock'
+            - './data/letsencrypt:/letsencrypt'

@@ -9,8 +9,8 @@ A docker stack made for wordpress based on :
 - nginx (latest)
 - mariadb (latest)
 - phpMyAdmin (latest)
-- wodby/varnish (latest)
-- Traefik (latest from wodby/varnish)
+- Varnish (latest from wodby/varnish)
+- Traefik 2 
 - HTTPS TLS autogen certificat
 
 ## Details

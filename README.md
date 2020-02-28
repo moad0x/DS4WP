@@ -1,5 +1,5 @@
 # DS4WP
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+[![Build Status](https://travis-ci.com/GGI1982/DS4WP.svg?branch=master)](https://travis-ci.com/GGI1982/DS4WP)
 
 A docker stack made for wordpress based on :
 

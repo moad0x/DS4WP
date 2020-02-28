@@ -1,4 +1,5 @@
 # DS4WP
+
 [![Build Status](https://travis-ci.com/GGI1982/DS4WP.svg?branch=master)](https://travis-ci.com/GGI1982/DS4WP)
 
 A docker stack made for wordpress based on :
@@ -9,13 +10,14 @@ A docker stack made for wordpress based on :
 - phpMyAdmin (latest)
 - wodby/varnish (latest)
 - Traefik (latest from wodby/varnish)
-- HTTPS TLS autogen certificat 
+- HTTPS TLS autogen certificat
 
 ## Details
+
 This docker-compose stack is meant to be used to create a complete WordPress stack cached by varnish and routed through Traefik V2 via dynamics labels.
 This stack includes HTTPS autogen certificate thanks to Traefik !
 
-Some useful WordPress plugins are already included in this release but will need to be activated manually if you want them. 
+Some useful WordPress plugins are already included in this release but will need to be activated manually if you want them.
 
 If you are willing to run multiple websites (and so multiple stacks) on a single host you will need to comment the Traefik service from the docker-compose file and implement a Traefik out-of-the-box in order to prevent reserved ports **(repo will be provided later)**.
 

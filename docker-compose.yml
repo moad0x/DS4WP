@@ -73,9 +73,8 @@ services:
             - 'traefik.http.routers.${PROJECT_NAME}_varnish.entrypoints=websecure'
             - 'traefik.http.routers.${PROJECT_NAME}_varnish.tls.certresolver=myhttpchallenge'
             - 'traefik.enable=true'
-
-     traefik:
-       restart: unless-stopped
+    traefik:
+        restart: unless-stopped
         image: 'traefik:v2.0'
         command:
             - '--log.level=DEBUG'

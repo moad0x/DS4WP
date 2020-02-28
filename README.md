@@ -1,3 +1,4 @@
+
 # DS4WP
 
 [![Build Status](https://travis-ci.com/GGI1982/DS4WP.svg?branch=master)](https://travis-ci.com/GGI1982/DS4WP)
@@ -19,7 +20,7 @@ This stack includes HTTPS autogen certificate thanks to Traefik !
 
 Some useful WordPress plugins are already included in this release but will need to be activated manually if you want them.
 
-If you are willing to run multiple websites (and so multiple stacks) on a single host you will need to comment the Traefik service from the docker-compose file and implement a Traefik out-of-the-box in order to prevent reserved ports **(repo will be provided later)**.
+If you are willing to run multiple websites (and so multiple stacks) on a single host you will need to comment the Traefik service from the docker-compose file and implement a Traefik out-of-the-box in order to prevent reserved ports **[see here to get details](https://github.com/GGI1982/Traefik-DS4WP)**.
 
 ## Environment variables
 
